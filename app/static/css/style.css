@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.padding-section {
+  padding: 120px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* .container{
+  max-width: 1170px;
+  margin: auto;
+} */
+
+/* start nav */
+
+nav {
+  background-color: #083d77;
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 160px;
+  margin: 6px 0;
+}
+
+.links {
+  display: flex;
+  margin: 25px 0 25px 0;
+}
+
+.links>li {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.links>li>a {
+  color: #ebebd3;
+}
+
+.results {
+  color: #ebebd3;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+i {
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+.menu {
+  position: absolute;
+  background-color: #083d77;
+  width: 150px;
+  border-top: 3px solid #ebebd3;
+  opacity: 0;
+  transition: .3s;
+  top: 46px;
+  left: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #ebebd3;
+  padding: 15px 8px;
+  color: #ebebd3;
+}
+
+.menu li:last-child {
+  border: 0;
+}
+
+@media (max-width:991px) {
+  
+}
+
+/* start main */
+
+main {
+  padding: 120px 0;
+}
+
+h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  border: 0;
+  padding: 12px;
+  margin-left: 15px;
+  border: 1px solid#083d77;
+  outline-color: #083d77;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #083d77;
+  border: 0;
+  color: #FFF;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* start table */
+
+/* .table{
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+}
+.inner{
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  padding: 10px;
+}
+
+@media (max-width:700px){
+  .table{
+     border: 1px solid;
+    display: grid; 
+    grid-template-columns: repeat(5,1fr);
+  }
+} 
+
+*/
+
+table {
+  border: 1px solid;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+
+
+th {
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding: 10px;
+}
+
+td {
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding: 10px;
+}
+
+tr {
+  border-bottom: 1px solid;
+  padding: 10px;
+}
+
+/* start header */
+
+header {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  background-color: #083e7786;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+/* start section news */
+
+.news h2 {
+  margin-bottom: 50px;
+}
+
+.container-news {
+  float: right;
+  width: 60%;
+}
+
+.news-content {
+  margin-bottom: 40px;
+  /* background-image: url(../images/news.jpg); */
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px #000;
+  border-radius: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.image img {
+  border-radius: 20px;
+}
+
+.overlay-news {
+  background-color: #083e777c;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.news-info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.171);
+  padding: 20px 40px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+
+.news-info h3 a {
+  color: #ebebd3;
+}
+
+.history {
+  margin-top: 10px;
+  color: #ebebd3;
+}
+
+.history i {
+  margin-left: 10px;
+}
+
+.container-aside {
+  width: 40%;
+  padding-right: 50px;
+  float: left;
+}
+
+aside {
+  background-color: #083d77;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 10px 0px #000;
+  border-radius: 20px;
+}
+
+aside h3 {
+  margin-bottom: 20px;
+  color: #ebebd3;
+}
+
+aside ul li {
+  margin-bottom: 20px;
+  color: #ebebd3;
+}
+
+aside ul li i {
+  margin-left: 10px;
+}
+
+/* start switcher */
+
+.switcher {
+  position: fixed;
+  max-width: 200px;
+  z-index: 10;
+  transition: 0.3s;
+  margin-top: 50px;
+  border: 1px solid;
+}
+
+.switch {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #083d77;
+  top: 100px;
+  left: -50px;
+}
+
+.switch i {
+  font-size: 20px;
+  color: #FFF;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(10px, -10px);
+}
+
+.switch-item {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.switch-item h4 {
+  margin-bottom: 10px;
+}
+
+.change-color {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.change-color .change {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 10px 10px;
+}
+
+.color1 {
+  background-color: red !important;
+}
+
+.color2 {
+  background-color: blue !important;
+}
+
+.color3 {
+  background-color: yellow !important;
+}
+
+.color4 {
+  background-color: green !important;
+}
+
+.color5 {
+  background-color: mediumvioletred !important;
+}
+
+.color6 {
+  background-color: #ff7300 !important;
+}
+
+.color7 {
+  background-color: #07ff3d !important;
+}
+
+.color8 {
+  background-color: #1568c7 !important;
+}
+
+.modes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modes .color {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(0, 0, 0);
+  margin: 0 0 10px 10px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    margin: auto;
+
+  }
+  .logo {
+    margin: 20px auto;
+  }
+  .links {
+    margin: 20px auto;
+  }
+  .tableparent {
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px){
+  .container {
+    max-width: 560px;
+    margin: auto;
+
+  }
+  .logo {
+    margin: 20px auto;
+  }
+  .links {
+    margin: 20px auto;
+  }
+
+}
+
+
+@media (min-width: 769px) and (max-width:991px) {
+  .container {
+    max-width: 720px;
+    margin: auto;
+
+  }
+  
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
