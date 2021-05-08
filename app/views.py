@@ -7,8 +7,6 @@ def test(request):
 
     num = request.POST.get("number")
 
-    print(num)
-
     context = {
         "results": Result.objects.filter(number=num),
         "form": ResultForm

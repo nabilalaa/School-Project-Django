@@ -53,121 +53,49 @@
     <!-- start table -->
     <div class="container">
         <div class="tableparent">
-{#            {% if results %}#}
-            {% for result in results %}
-            <table>
-                <tr>
-                    <td>الاسم : {{ result.name}}</td>
-                    <th>العربي</th>
-                    <th>اللغة الانجليزية</th>
-                    <th>الرياضات</th>
-                    <th>العلوم</th>
-                    <th>الدراسات الاجتماعية</th>
-                    <th>المجموع</th>
-                    <th>الدين</th>
-                    <th>الحاسب</th>
-                    <th>الرسم</th>
-                </tr>
-                <tr>
-                    <td> الدرجة الكبري</td>
-                    <td>30</td>
-                    <td>50</td>
-                    <td>30</td>
-                    <td>50</td>
-                    <td>30</td>
-                    <td>50</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>درجة الطالب</td>
-                    <td>{{ result.arabic }}</td>
-                     <td>{{ result.math }}</td>
-                     <td>{{ result.science }}</td>
-                     <td>{{ result.art }}</td>
-                    <td>30</td>
-                    <td>50</td>
-                    <td>30</td>
-                    <td>50</td>
-                    <td>30</td>
-                </tr>
-            </table>
-        {% endfor %}
-{#        {% endif %}#}
+            {% if results %}
+                {% for result in results %}
+                <table>
+                    <tr>
+                        <td>الاسم : {{ result.name}}</td>
+                        <th>العربي</th>
+                        <th>اللغة الانجليزية</th>
+                        <th>الرياضات</th>
+                        <th>العلوم</th>
+                        <th>المجموع</th>
+                        <th>الدين</th>
+                        <th>الحاسب</th>
+                        <th>الرسم</th>
+                    </tr>
+                    <tr>
+                        <td> الدرجة الكبري</td>
+                        <td>30</td>
+                        <td>50</td>
+                        <td>30</td>
+                        <td>50</td>
+                        <td>30</td>
+                        <td>50</td>
+                        <td>30</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>درجة الطالب</td>
+                        <td>{{ result.arabic }}</td>
+                        <td>{{ result.english }}</td>
+                        <td>{{ result.math }}</td>
+                        <td>{{ result.science }}</td>
+                        <td>{{ result.sum }}</td>
+                        <td>{{ result.belief }}</td>
+                        <td>{{ result.computer }}</td>
+                        <td>{{ result.art }}</td>
+                    </tr>
+                </table>
+            {% endfor %}
+        {% else %}
+            <p>not found</p>
+        {% endif %}
         </div>
     </div>
-
-
-
-    <!-- start header -->
-
-    <!-- <header>
-        <div class="slide"><img src="images/edit2.jpg" alt=""></div>
-        <div class="slide"><img src="images/news.jpg" alt=""></div>
-        <div class="slide"><img src="images/slide2.jpg" alt=""></div>
-        <div class="slide"><img src="images/slide1.jpg" alt=""></div>
-    </header> -->
-    <!-- start news -->
-
-    <!-- <section class="news padding-section" >
-        <div class="container">
-            <h2>اخر الاخبار</h2>
-            <div class="container-news">
-                <div class="news-content">
-                    <div class="image"><img src="images/news.jpg" alt=""></div>
-                    <div class="overlay-news">
-                        <div class="news-info">
-                            <h3><a href="#">ظهور نتيجة الصف الثاني الثانوي الترم الثاني 2020</a></h3>
-                            <div class="history"><i class="far fa-calendar-alt"></i>10-3-2020</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-content">
-                    <div class="overlay-news">
-                        <div class="news-info">
-                            <h3><a href="#">ظهور نتيجة الصف الثاني الثانوي الترم الثاني 2020</a></h3>
-                            <div class="history"><i class="far fa-calendar-alt"></i>10-3-2020</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-content">
-                    <div class="overlay-news">
-                        <div class="news-info">
-                            <h3><a href="#">ظهور نتيجة الصف الثاني الثانوي الترم الثاني 2020</a></h3>
-                            <div class="history"><i class="far fa-calendar-alt"></i>10-3-2020</div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <div class="container-aside">
-                <aside>
-                    <h3>المضافة حديثا</h3>
-                    <ul>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                    </ul>
-                </aside>
-                <aside>
-                    <h3>المضافة حديثا</h3>
-                    <ul>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                        <li><i class="fas fa-arrow-left"></i>ظهور نتيجة الصف الثاني الثانوي الترم الثاني</li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </section> -->
-
-    <!-- start footer -->
-
-    <footer></footer>
-
     <script src="{% static "js/main.js"%}"></script>
 </body>
 
