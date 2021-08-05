@@ -86,8 +86,11 @@
                     </tr>
                 </table>
             {% endfor %}
-        {% else %}
-            <p>not found</p>
+            {% else %}
+                {% for msg in messages %}
+                    <p>{{ msg }}</p>
+
+                {% endfor %}
         {% endif %}
         </div>
     </div>
